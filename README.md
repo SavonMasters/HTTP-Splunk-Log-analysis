@@ -16,7 +16,7 @@ At April 25th, 2025 6:49 am I received an error of different selections of error
 I began my investigation by looking to see the complete amount of events for this log and how long it lasted. I did this by using the timeline.
 
  
-
+![image alt](https://github.com/SavonMasters/HTTP-Splunk-Log-analysis/blob/054d53a25fc2ddad4d2410e24ac29f7fe1362d3f/Splunk%20HTTP%202.png)
 Then, I am working with HTTP logs so I wanted to get the top source IP addresses. I wanted a general sense of who was generating the most traffic to the network devices. I used the “Stats count by id.orig_h | sort - count.”. 
 
 
