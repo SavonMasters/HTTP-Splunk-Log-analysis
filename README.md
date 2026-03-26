@@ -24,7 +24,7 @@ Then, I am working with HTTP logs so I wanted to get the top source IP addresses
 Next, I wanted to see server errors on the network side to see how the IP addresses might be affecting the network. All server errors happen between 500. I made “Status.code >=500 status.code <600 | stats count as server_errors.” just to find the server error codes of 500.
 
 
-
+![image alt](https://github.com/SavonMasters/HTTP-Splunk-Log-analysis/blob/b8bd829dfeb3e0cedc97d75182dc74f6fd739baa/Splunk%20HTTP%204.png)
 Following that, I wanted to see the User agents of the IP addresses to verify if they were legitimate. I found 4 that were out of the normal. I did a google search and learned “Botneck-checker/1.0” is used for reconnaissance to see weak points in the CPU or GPU usage, “Curl 7.68.0” is used as a command-line tool to evade detection, exfiltrate data, and etc this is a MITRE technique of T1041, “Python-request 2.25.1” is used for credential exfiltration attacks over a HTTP server this is a MITRE technique of TA0006, and “Sqlmap 1.5.1”
  is used for Command and Control (C2) line to establish a connection while executing attacks this is the MITRE technique of T1071.001. The recognizable User agent’s actions and history emphasizes the HTTP network was being misused. 
 
