@@ -30,7 +30,9 @@ Following that, I wanted to see the User agents of the IP addresses to verify if
 
 
 
-![image alt](https://github.com/SavonMasters/HTTP-Splunk-Log-analysis/blob/d67c1e61779686bc0835ccaecd3f48149de640bf/Splunk%20HTTP%205.png)(https://github.com/SavonMasters/HTTP-Splunk-Log-analysis/blob/d67c1e61779686bc0835ccaecd3f48149de640bf/Splunk%20HTTP%206.png)
+![image alt](https://github.com/SavonMasters/HTTP-Splunk-Log-analysis/blob/d67c1e61779686bc0835ccaecd3f48149de640bf/Splunk%20HTTP%205.png)
+![image alt](https://github.com/SavonMasters/HTTP-Splunk-Log-analysis/blob/d67c1e61779686bc0835ccaecd3f48149de640bf/Splunk%20HTTP%206.png)
+![image alt](https://github.com/SavonMasters/HTTP-Splunk-Log-analysis/blob/00f352746f2732f514d2692fac52aa316d64eb02/Splunk%20HTTP%207.png)
 As soon as I knew there were malicious User agents I wanted to see their actions on the system. It didn't seem to be any attacks inside the User agents. I typed “User_agent, | table ts, id.orig_h, method, uri.”.
 
 
