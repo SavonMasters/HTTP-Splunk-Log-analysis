@@ -80,7 +80,7 @@ Looking at the parts of the network I was able to see that attacks were real and
 
 
 ![image alt](https://github.com/SavonMasters/HTTP-Splunk-Log-analysis/blob/4d02dff9417c9e96f8d60522cc6c6cfa95ec1cab/Splunk%20HTTP%2011.png)
-
+![image alt](https://github.com/SavonMasters/HTTP-Splunk-Log-analysis/blob/590452e3fd227785d3360bb412eea8f5e6788715/Splunk%20HTTP%2012.png)
 
 			                                		Things I learned
 * Greater knowledge of the Splunk platform through SQL and tables.
