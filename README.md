@@ -42,6 +42,7 @@ To continue, I viewed the methods being used to see what other IP addresses were
 ![image alt](https://github.com/SavonMasters/HTTP-Splunk-Log-analysis/blob/535d6bd59e35e9be08eb01c9bc4f580f0dd2f116/Splunk%20HTTP%209.png)
 Moving on, I read over the Uris because I wanted to see possible entrance points on the network. I was alarmed to see how many Uris could be used to access confidential information from what would be inside of them. This is an open indicator of a File inclusion attack because the “./”’ is being directed to a private area of the Uri. I queried “Method IN uri (/admin, /etc/passwd, /config.php, /shell.php, /wp-admin, /phpmyadmin). | table ts, id.orig_h, id.resp_h, uri.” to present all results.  
 
+![image alt](https://github.com/SavonMasters/HTTP-Splunk-Log-analysis/blob/ef3e9c45cd29eb105cece3330a32dc976e97d49e/Splunk%20HTTP%2010.png)
 Afterwards, I wanted to analyze for any large file transfers. I wanted to see what IP address was requesting a high response body, who they were making it too, where they were trying to get it, the method and user agent used, and the entire response body they wanted. This could be an exfiltration attack because large response bodies is a sign that an attacker is trying to exfiltrate data from the network. I searched “Resp_body_len >=50000 | table ts, id.orig_h, id.resp_h, uri, method, user_agent, resp_body_len | sort - resp_body_len.”.
 
 
