@@ -51,30 +51,45 @@ Looking at the parts of the network I was able to see that attacks were real and
 
 
 			                                  			IOCs
-A  multitude of server errors from the status code of 500.
-Often used malicious User agents to execute attacks. “Botnet-checker/1.0, Curl 7.68.0, Python-request 2.25.1, and Sqlmap 1.5.1”.
-The User agents using the attacks of “Reconnaissance, data exfiltration this a MITRE code “T1041”, credential exfiltration this a MITRE code “TA0006”, and Command and Control Server (C2) this a MITRE code “T1071.001”.
-Out of the regular methods being used. “Connect, Options, Delete, Put”.
-The request to access potentially sensitive information inside of the URIs. beginning with a Local file inclusion attack this a a MITRE code “T1083”. 
-A few requests for a large response body sizes that could be a possible large file transfer to a unknown source.
+* A  multitude of server errors from the status code of 500.
 
-				Recomendations 
-Create a Splunk alert to get server errors to immediately trouble shoot them.
-Ingest worldly known User agents in an IPS to protect against known vulnerabilities.
-Monitor request methods for source IP addresses and destination IP addresses making suspicious requests. 
-Strengthen the network firewall to stop local file inclusion attacks from getting to private information.
-Create a Splunk alert to scan over large response body sizes to see the data being requested and where they are trying to send the data to end large file transfers.
-Below I imported the photos of the Users agent’s actions that were present on the system and the attacks that I found.
-Towards the bottom I added the Splunk alerts for the server errors and the large body sized request.
+* Often used malicious User agents to execute attacks. “Botnet-checker/1.0, Curl 7.68.0, Python-request 2.25.1, and Sqlmap 1.5.1”.
+
+* The User agents using the attacks of “Reconnaissance, data exfiltration this a MITRE code “T1041”, credential exfiltration this a MITRE code “TA0006”, and Command and Control Server (C2) this a MITRE code “T1071.001”.
+
+* Out of the regular methods being used. “Connect, Options, Delete, Put”.
+
+* The request to access potentially sensitive information inside of the URIs. beginning with a Local file inclusion attack this a a MITRE code “T1083”. 
+
+* A few requests for a large response body sizes that could be a possible large file transfer to a unknown source.
+
+											Recomendations 
+* Create a Splunk alert to get server errors to immediately trouble shoot them.
+
+* Ingest worldly known User agents in an IPS to protect against known vulnerabilities.
+
+* Monitor request methods for source IP addresses and destination IP addresses making suspicious requests. 
+
+* Strengthen the network firewall to stop local file inclusion attacks from getting to private information.
+
+* Create a Splunk alert to scan over large response body sizes to see the data being requested and where they are trying to send the data to end large file transfers.
+
+* Below I imported the photos of the Users agent’s actions that were present on the system and the attacks that I found.
+
+* Towards the bottom I added the Splunk alerts for the server errors and the large body sized request.
 
 
 
 
 
 			                                		Things I learned
-Greater knowledge of the Splunk platform through SQL and tables.
-Actively used malicious User agents and their actions.
-Learned the descriptions of more MITRE attacks.
-All the HTTP request methods that are most used.
-Areas attackers would like to access inside of URIs to get confidential data. 
+* Greater knowledge of the Splunk platform through SQL and tables.
+
+* Actively used malicious User agents and their actions.
+
+* Learned the descriptions of more MITRE attacks.
+
+* All the HTTP request methods that are most used.
+
+* Areas attackers would like to access inside of URIs to get confidential data. 
 Connect the large body request amount to a file being transferred.
