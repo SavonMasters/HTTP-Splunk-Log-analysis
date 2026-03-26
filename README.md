@@ -12,7 +12,7 @@ At April 25th, 2025 6:49 am I received an error of different selections of error
 
 					                                  Investigation
 
-
+*[image alt](https://github.com/SavonMasters/HTTP-Splunk-Log-analysis/blob/da49a37f14713b72f79c6a58770509b03f906242/Splunk%20HTTP%201.png)
 I began my investigation by looking to see the complete amount of events for this log and how long it lasted. I did this by using the timeline.
 
  
