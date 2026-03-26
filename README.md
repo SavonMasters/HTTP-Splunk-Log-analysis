@@ -35,7 +35,7 @@ Following that, I wanted to see the User agents of the IP addresses to verify if
 ![image alt](https://github.com/SavonMasters/HTTP-Splunk-Log-analysis/blob/00f352746f2732f514d2692fac52aa316d64eb02/Splunk%20HTTP%207.png)
 As soon as I knew there were malicious User agents I wanted to see their actions on the system. It didn't seem to be any attacks inside the User agents. I typed “User_agent, | table ts, id.orig_h, method, uri.”.
 
-
+![image alt](https://github.com/SavonMasters/HTTP-Splunk-Log-analysis/blob/3d05682f1094e2dad4de00c05975dbc42ddca512/Splunk%20HTTP%208.png)
 To continue, I viewed the methods being used to see what other IP addresses were doing on the network. I found a lot of “Connect, Options, Delete, Put” requests which are not typically used.  I looked with “Method in CONNECT, OPTIONS, DELETE, PUT.” and returned the results . 
 
 
