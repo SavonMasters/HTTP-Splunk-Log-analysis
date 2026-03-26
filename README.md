@@ -20,7 +20,7 @@ I began my investigation by looking to see the complete amount of events for thi
 Then, I am working with HTTP logs so I wanted to get the top source IP addresses. I wanted a general sense of who was generating the most traffic to the network devices. I used the “Stats count by id.orig_h | sort - count.”. 
 
 
-
+![image alt](https://github.com/SavonMasters/HTTP-Splunk-Log-analysis/blob/617a17c23641aefd9c3d45118946716ff12dddab/Splunk%20HTTP%203.png)
 Next, I wanted to see server errors on the network side to see how the IP addresses might be affecting the network. All server errors happen between 500. I made “Status.code >=500 status.code <600 | stats count as server_errors.” just to find the server error codes of 500.
 
 
