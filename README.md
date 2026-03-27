@@ -6,12 +6,12 @@ Analyst: Savon Masters
 
 Date: February 2nd, 2026
 
-										Summary
+											Summary
         
 
 At April 25th, 2025 6:49 am I received an error of different selections of errors happening on the network.  I investigated to see the chain of events developing on the network.
 
-					                     Investigation
+					                     	Investigation
 
 ![image alt](https://github.com/SavonMasters/HTTP-Splunk-Log-analysis/blob/da49a37f14713b72f79c6a58770509b03f906242/Splunk%20HTTP%201.png)
 I began my investigation by looking to see the complete amount of events for this log and how long it lasted. I did this by using the timeline.
@@ -49,11 +49,11 @@ Moving on, I read over the Uris because I wanted to see possible entrance points
 Afterwards, I wanted to analyze for any large file transfers. I wanted to see what IP address was requesting a high response body, who they were making it too, where they were trying to get it, the method and user agent used, and the entire response body they wanted. This could be an exfiltration attack because large response bodies is a sign that an attacker is trying to exfiltrate data from the network. I searched “Resp_body_len >=50000 | table ts, id.orig_h, id.resp_h, uri, method, user_agent, resp_body_len | sort - resp_body_len.”.
 
 
-				            	    	Conclusion 
+				            	    		Conclusion 
 Looking at the parts of the network I was able to see that attacks were real and were imposing on the security threat to the network. The attacks consisted of “Reconnaissance, data exfiltration, credential exfiltration, and a Command Control Server (C2)”. Those were what I was able to find but I would advise doing a rescan to see if any other attacks still ongoing. 
 
 
-			                            	IOCs
+			                            		IOCs
 * A  multitude of server errors from the status code of 500.
 
 * Often used malicious User agents to execute attacks. “Botnet-checker/1.0, Curl 7.68.0, Python-request 2.25.1, and Sqlmap 1.5.1”.
@@ -67,7 +67,7 @@ Looking at the parts of the network I was able to see that attacks were real and
 * A few requests for a large response body sizes that could be a possible large file transfer to a unknown source.
 
 									
-									Recomendations 
+										Recomendations 
 * Create a Splunk alert to get server errors to immediately trouble shoot them.
 
 * Ingest worldly known User agents in an IPS to protect against known vulnerabilities.
@@ -92,7 +92,7 @@ Looking at the parts of the network I was able to see that attacks were real and
 ![image alt](https://github.com/SavonMasters/HTTP-Splunk-Log-analysis/blob/a5f7c46662685e2976e1881b611d1fed2b6c5d30/Splunk%20HTTP%2017.png)
 			                
 							
-									Things I learned
+										Things I learned
 * Greater knowledge of the Splunk platform through SQL and tables.
 
 * Actively used malicious User agents and their actions.
